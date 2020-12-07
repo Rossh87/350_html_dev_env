@@ -1,0 +1,11 @@
+{
+  "name": "chamber_of_commerce_env",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "<hunter.dev.87@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3"
+  }
+}

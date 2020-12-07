@@ -1,0 +1,528 @@
+<style>
+    .block.content p, .block.content div, .block.content span, .block.content li, .block.content h1, .block.content h2, .block.content h3, .block.content h4, .block.content h5 {
+    color: inherit;
+    line-height: 1.25em;
+    letter-spacing: 0.1px;
+      
+  }
+    .custom-container {
+        max-width: 1170px;
+        margin: auto;
+        font-size: 2.5rem;
+    }
+    .header {
+        position: relative;
+    }
+
+    .header_bg {
+        width: 95%;
+    }
+
+    #custom-container .header_content {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      color: white;
+    }
+
+    .header_bottom {
+        display: flex;
+        justify-content: space-between;
+        margin: 1em;
+    }
+
+    .header_text {
+        text-align: center;
+        color: white;
+        font-size: 2.5em;
+        margin-top: 1em;
+    }
+
+    .header_tags {
+        display: flex;
+        align-items: flex-end;
+        color: rgb(64, 215, 212);
+        font-weight: bold;
+        /* transform: translateY(-2em); */
+        font-size: 1.4em;
+    }
+
+    .header_inset {
+        background-color: rgb(255, 97, 18);
+        border-radius: 1.5em;
+        color: white;
+        border: 0.25em solid white;
+        padding: 1em;
+        max-width: 35%;
+        font-weight: bold;
+    }
+
+    #custom-container .header_inset--md {
+        font-size: inherit;
+        display: none;
+        padding: 1em;
+        color: white;
+        background-color: rgb(143, 165, 59);
+        margin: 1em auto;
+    }
+
+    .header_inset--question {
+        float: left;
+    }
+
+    .article_head {
+        color: rgb(143, 165, 59);
+        text-align: center;
+        font-size:1.5em;
+    }
+
+    .article_intro {
+        font-size: inherit;
+    }
+
+    .main {
+        display: flex;
+    }
+
+    .main_content {
+        flex: 3;
+        padding-right: 1em;
+    }
+
+    .article_splitGraphic {
+        display: flex;
+        justify-content: space-between;
+        color: rgb(143, 165, 59);
+        margin: 2em auto;
+    }
+
+    .article_splitGraphic--graphic{
+        flex:1; 
+        padding:1em;
+        max-width: 60%;
+    }
+
+    #custom-container .article_splitGraphic--text{
+        color: white;
+        background-color: rgb(255, 97, 18);
+        padding:1em;
+        flex: 2;
+        font-size: inherit;
+    }
+
+    .main_vert-sidebar {
+        flex: 1;
+        border-left: 2px solid rgb(255, 97, 18);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main_vert-sidebar--text {
+        text-align: center;
+    }
+
+    .main_vert-sidebar--logo {
+        max-height: 100px;
+        max-width: 100px;
+        margin: 1em;
+    }
+
+    #custom-container .main_content--inset {
+        margin-right: 1em;
+        max-width: 40%;
+        background-color: rgb(143, 165, 59);
+        padding: .5em;
+        padding-left: 1.5em;
+        color: white;
+        border-radius: 1.5em;
+        float: left;
+        font-weight: bold;
+    }
+
+    #custom-container .main_text--green {
+        color: rgb(143, 165, 59);
+        font-weight: bold;
+        font-size: inherit;
+    }
+
+    .button-bar {
+        display: flex;
+        justify-content: space-between;
+        margin: 2em;
+    }
+
+    .button-bar_button {
+        color:white;
+        width: 100%;
+        border: none;
+        font-weight: bold;
+        font-size: inherit;
+        white-space: normal;
+    }
+
+    .button-bar_link {
+        background-color: rgb(255, 97, 18);
+        max-width: 30%;
+        flex: 1;
+        margin: 0 .5em;
+        padding: 0.25em;
+    } 
+
+    .button-bar_link:hover {
+        text-decoration: none;
+    }
+
+    .footer_notes {
+        font-size: 0.75em;
+    }
+
+    .footer_logos {
+        border-top: 2px solid rgb(143, 165, 59);
+        flex-wrap: wrap;
+    }
+
+    .footer_logos .footer_logos--mep {
+        min-width: 200px;
+    }
+    
+    /* util classes */
+    .tab {
+        margin-left: 2em;
+    }
+
+    .logo-bar {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .logo-item {
+        max-height: 120px;
+        max-width: 120px;
+        min-width: 120px;
+        margin: 1em;
+    }
+
+    #custom-container .bold-diminish {
+        font-weight: bold;
+    }
+
+    .rounded{
+        border-radius: 1.5em;
+    }
+
+    #force-font-1, #force-font-2, #force-font-3{
+        font-size: inherit;
+    }
+
+    .para-space {
+        margin: 0.5em auto;
+    }
+
+    #custom-container .inherit-font{
+        font-size: inherit;
+    }
+
+/* WP undo */
+.block p {
+    font-size: inherit;
+}
+
+/* Queries */
+    @media screen and (max-width: 1200px){
+        .custom-container {
+            font-size: 2rem;
+        }
+
+        .footer_logos {
+            justify-content: space-around;
+        }
+    }
+
+    @media screen and (max-width: 990px){
+        .header_inset--lg {
+            display:none;
+        }
+      
+      #custom-container .header_text {
+            color: rgb(255, 97, 18);
+        }
+
+        #custom-container .header_inset--md {
+            display: block;
+        }
+
+        .header_tags{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article_splitGraphic {
+            margin: 1em auto;
+        }
+        
+        .button-bar_button {
+            display:block;
+            text-align: center;
+            padding: 0.5em;
+        }
+
+        .button-bar_link{
+            word-wrap: normal;
+        }
+
+        .header_bg {
+            width:100%;
+        }
+
+        .footer_sponsors {
+            min-width: 100%;
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 700px){
+        
+
+        .article_splitGraphic {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .main {
+            flex-direction: column;
+        }
+
+        .main_content {
+            margin-bottom: 2em;
+        }
+
+        .main_vert-sidebar {
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            border-bottom:2px solid rgb(255, 97, 18);
+            border-left: none;
+            border-top:2px solid rgb(255, 97, 18);
+        }
+
+        .main_vert-sidebar--text {
+            width: 100%;
+        }
+
+        .footer_logos {
+            justify-content: space-be;
+        }
+
+        .button-bar {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .button-bar_link {
+            max-width: 70%;
+            margin: 1em;
+        }
+
+        .button-bar_button{
+            font-size: 1.25em;
+        }
+    }
+
+    @media screen and (max-width: 600px){
+        .header_text {
+            font-size: 2em;
+            margin-top: 0.5em;
+        }        
+    }
+
+    @media screen and (max-width: 500px){
+        .custom-container {
+            padding: 0;
+        }
+        .header {
+            font-size: .75em;
+        }
+
+        .header_tags {
+            display: block;
+            text-align: center;
+            transform: translateY(7vw);
+        }
+
+        .article {
+            margin-top: 3em;
+        }
+
+        .main_content--inset {
+            display: none;
+        }
+
+        .button-bar_button {
+            font-size: 1em;
+        }
+
+        .footer_logos {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        .header_tags {
+            transform: translateY(-0.5em);
+        }        
+    }
+</style>
+<div class="custom-container" id="custom-container">
+    <header class="header">
+        <img
+            src="https://mn350.org/wp-content/uploads/2020/04/coc_refinery_header.jpg"
+            alt="picture of a refinery"
+            class="header_bg"
+        />
+        <div class="header_content">
+            <h1 class="header_text">
+                Tell the Minnesota Chamber of Commerce: <br />
+                Climate Change is <br />
+                BAD for BUSINESS
+            </h1>
+            <div class="header_bottom">
+                <div class="header_tags">
+                    #FriendToBigOil #MNChamberDoBetter
+                </div>
+                <div class="header_inset header_inset--lg">
+                    Why is the Minnesota Chamber trying to kill climate
+                    solutions supported by Minnesotans and our business
+                    community? (Hint: Ask the fossil fuel industry.)
+                </div>
+            </div>
+        </div>
+    </header>
+    <article class='article'>
+        <h2 class="article_head">
+            Who’s doing the dirty work to protect Big Oil's profits?
+        </h2>
+
+        <p class="bold-diminish rounded header_inset--md inherit-font">Why is the Minnesota Chamber trying to kill climate
+            solutions supported by Minnesotans and our business
+            community? (Hint: Ask the fossil fuel industry.)</p>
+        <pclass="article_intro inherit-font">
+            As Minnesotans, we appreciate hometown corporations like Target, Cargill, Best Buy, 3M and General Mills -- especially as these businesses show up to support our communities in this time of need. All of these businesses have also asked Minnesota’s lawmakers to pass real solutions to the climate change crisis we all face.
+        </p>
+
+        <div class="article_splitGraphic">
+            <img
+                class='article_splitGraphic--graphic'
+                src="https://mn350.org/wp-content/uploads/2020/04/coc_flint_hills_logo.jpg"
+                alt="Flint Hills Resources logo"
+            />
+            <p
+            class='article_splitGraphic--text bold-diminish rounded inherit-font'
+            >
+                A lobbyist for Flint Hills Resources and Koch
+                Cos. sits on the Minnesota Chamber of Commerce's
+                board.
+            </p>
+        </div>
+        <div class="main">
+            <div class="main_content">
+                
+                <p class="main_content--withInset">
+                    <p>
+                        <div class="main_content--inset rounded">
+                            In the past three years, the Minnesota Chamber
+                            of Commerce has spent $6.5 million on lobbying
+                            in Minnesota.
+                        </div>
+                            While we’re all pulling together to weather this storm and protect our families, fossil fuel businesses like Flint Hills Resources, backed by the Minnesota Chamber of Commerce, are quietly jockeying to protect their profits. In contrast to the leadership of Minnesota’s business community, the Chamber is trying to block common-sense legislation that would help hard-pressed families save money on their utility bills and conserve energy.
+                    </p>
+                    
+                    <p class="para-space inherit-font">
+                        Our clean energy transition will create jobs for
+                        thousands of Minnesotans and a healthier, more
+                        prosperous future for the people and businesses
+                        of our state.
+                    </p>
+                        
+                    
+                </p>
+
+                <p class="main_text--green inherit-font">
+                    Let businesses like Target, 3M, General Mills and
+                    Cargill know that the Minnesota Chamber of Commerce
+                    is preventing Minnesota from being a national leader
+                    on climate change. It’s time for the Chamber to STOP
+                    doing the dirty work for a dying fossil fuel industry
+                    and STAND UP for the values of Minnesotans and our
+                    business community.
+                </p>
+            </div>
+
+            <div class="main_vert-sidebar logo-bar">
+                <p class="main_vert-sidebar--text bold-diminish">MN CHAMBER MEMBERS INCLUDE:</p>
+                <img
+                    class="main_vert-sidebar--logo logo-item"
+                    src="https://mn350.org/wp-content/uploads/2020/04/coc_target_logo.jpg"
+                    alt="Target Corp logo"
+                />
+                <img
+                    class="main_vert-sidebar--logo logo-item"
+                    src="https://mn350.org/wp-content/uploads/2020/04/coc_best_buy_logo.svg"
+                    alt="Best Buy Corp logo"
+                />
+                
+                <img
+                    class="main_vert-sidebar--logo logo-item"
+                    src="https://mn350.org/wp-content/uploads/2020/04/coc_cargill_logo.jpg"
+                    alt="Cargill Corp logo"
+                />
+                <img
+                    class="main_vert-sidebar--logo logo-item"
+                    src="https://mn350.org/wp-content/uploads/2020/04/coc_general_mills_logo.jpg"
+                    alt="General Mills logo"
+                />
+                
+                <img
+                    class="main_vert-sidebar--logo logo-item"
+                    src="https://mn350.org/wp-content/uploads/2020/04/coc_tennant_logo.jpg"
+                    alt="Tennant Corp logo"
+                />
+            </div>
+        </div>
+    </article>
+
+    <div class="button-bar">
+        <a class="button-bar_link rounded" href="https://mn350action.org/chamber-of-commerce/petition-chamber-of-commerce"><button tabindex="-1" class="button-bar_button rounded">SIGN OUR PETITION NOW</button></a>
+
+        <a class="button-bar_link rounded" href="https://mn350action.org/chamber-ofcommerce/tweet-the-chamber-of-commerce"><button tabindex="-1" class="button-bar_button rounded">SEND A TWEET NOW</button></a>
+
+        <a class="button-bar_link rounded" class="button-bar_link" href="https://mn350.org/news/climate-leaders-pressure-minnesota-chamber-of-commerce-to-prioritize-states-people-and-businesses-over-fossil-fuel-industry/" ><button tabindex="-1" class="button-bar_button rounded">CAMPAIGN NEWS RELEASE</button></a>
+          
+    </div>
+
+    <footer class="footer">
+        <div class="footer_logos logo-bar">
+            <span class="footer_sponsors logo-item bold-diminish">CAMPAIGN SPONSORS:</span>
+
+            <img src="https://mn350.org/wp-content/uploads/2020/04/coc_sierra_club_logo.jpg" alt="Sierra Club logo" class="logo-item">
+
+            <img src="https://mn350.org/wp-content/uploads/2020/04/oie_nz40ZizYBx3P.jpg" alt="MN350 logo" class="logo-item">
+
+            <img src="https://mn350.org/wp-content/uploads/2020/04/coc_interfaith_power_logo.jpg" alt="MN Interfaith Power and Light logo" class="logo-item">
+
+            <img src="https://mn350.org/wp-content/uploads/2020/04/coc_env_mn_logo.jpg" alt="Environment MN logo" class="logo-item">
+
+            <img src="https://takeactionminnesota.org/wp-content/uploads/2019/11/logo.png" alt="TakeAction MN logo" class="logo-item">
+
+            <img src="https://mn350.org/wp-content/uploads/2020/05/coc_mep_logo.jpg" alt="MN Environmental Partnership logo" class="logo-item footer_logos--mep">
+
+        </div>
+    </footer>
+</div>
