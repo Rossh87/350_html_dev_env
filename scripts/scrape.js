@@ -15,7 +15,7 @@ const selectLinkElements = ($) => $('link');
 const filterOutNonStylesheets = (jqLinks) =>
     jqLinks.filter("[rel='stylesheet']");
 
-const writePath = path.join(__dirname, 'output.html');
+const writePath = path.join(__dirname, 'scrapedStyles.txt');
 
 const writer = fs.createWriteStream(writePath);
 

@@ -1,0 +1,5 @@
+GOALS:
+I can automatically get stylesheets that will be active on web page loaded into my local environment
+I can programatically generate an HTML template that is already linked to both my own styles and styles from WORDPRESS
+I can develop custom styles in a separate stylesheet from the HTML I am developing.  These styles should be loaded last, to allow shadowing of WP styles
+I can programmatically generate a file that contains ONLY the content that should be pasted into 350Action.org
